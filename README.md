@@ -1,4 +1,4 @@
-> ! CAUTION
+> ![CAUTION]
 > This utility is still in a beta fork and may not work as intended. Please wait for the official release.
 
 <p align="center">
