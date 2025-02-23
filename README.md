@@ -20,7 +20,7 @@
 1. Download the specific scripting utility of your choice.
 2. Execute the provided loadstring below.
 ```luau
-loadstring(game:HttpGet("https://raw.githubusercontent.com/KardessBLOX/StarVape/main/NewMainScript.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RiiDadPGN/StarVape/main/NewMainScript.lua", true))()
 ```
 
 ## Possible Issues
@@ -31,7 +31,7 @@ Half of the time its usually the executor causing faults, please make sure the e
 ### User Issues
 If its not the supposed utility at fault, please try some troubleshooting steps.
 1. Deleting the newvape folder (WITH THE GAME CLOSED).
-2. Making sure you have connection to [the main loadstring.](https://raw.githubusercontent.com/KardessBLOX/StarVape/refs/heads/main/NewMainScript.lua)
+2. Making sure you have connection to [the main loadstring.](https://raw.githubusercontent.com/RiiDadPGN/StarVape/refs/heads/main/NewMainScript.lua)
 3. Ensuring no external script is conflicting with vape.
 
 ## Developers & Credits
