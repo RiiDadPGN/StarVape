@@ -6,36 +6,38 @@
   </picture>
 </p>
 <h2 align="center">
-  A Roblox script built from the ground up for your precise needs!
+  A Roblox script modification, built just for you're imagination.
   <br/>
-  Rise up to the top while remaining completely untouchable.
+  Go up to the top still remaining unstoppable.
 </h2>
 
 ## Contacts
-[Discord](https://discord.gg/xRu8jUbSS5)
+[Discord](https://discord.gg/5bJPwUS5Pv)
 <br/>
-[Youtube](https://www.youtube.com/@ScriptsQP)
+[Youtube](https://www.youtube.com/@kardessbloxofficial)
 
 ## Usage
 1. Download the specific scripting utility of your choice.
 2. Execute the provided loadstring below.
 ```luau
-loadstring(game:HttpGet("https://raw.githubusercontent.com/QP-Offcial/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KardessBLOX/StarVape/main/NewMainScript.lua", true))()
 ```
 
 ## Possible Issues
-Half of the time its usually the scripting utility at fault, please make sure the utility meets certain quality standards such as.
+Half of the time its usually the executor causing faults, please make sure the executor meets certain quality standards such as.
 1. Supporting file functions & the debug library.
 2. Not implementing lua generated / half baked versions of such functions resulting in unintended behavior.
 3. Maintaing the same behavior across all usages of said functions.
 ### User Issues
 If its not the supposed utility at fault, please try some troubleshooting steps.
 1. Deleting the newvape folder (WITH THE GAME CLOSED).
-2. Making sure you have connection to [the main loadstring.](https://raw.githubusercontent.com/QP-Offcial/VapeV4ForRoblox/refs/heads/main/NewMainScript.lua)
+2. Making sure you have connection to [the main loadstring.](https://raw.githubusercontent.com/KardessBLOX/StarVape/refs/heads/main/NewMainScript.lua)
 3. Ensuring no external script is conflicting with vape.
 
 ## Developers & Credits
-[QP-Offcial](https://github.com/QP-Offcial) - Lead maintainer of the project - scriptsqp on Discord
+[RiiDadPGN](https://github.com/RiiDadPGN) - Lead maintainer of the project - am_pro_script69420 on Discord
+<br/>
+[QP-Offcial](https://github.com/QP-Offcial) - Maintainer of the fork - scriptsqp on Discord
 <br/>
 [jhki](https://github.com/jhki0) - Developer of the project - 59it on Discord
 <br/>
