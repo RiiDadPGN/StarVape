@@ -1,1 +1,12 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/QP-Offcial/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+--[[
+   ⭐->STAR VAPE
+    🤝 Many features!
+   -> AntiHit🎯
+   -> Unpatched NoFall🌫️
+  -> Nightmare Emote🌌
+ ->  Support on all devices📱
+
+ ✌️ | MADE WITH LOVE BY RIIDAD/KardessBLOX
+]]--
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RiiDadPGN/StarVape/main/loader.lua", true))()
