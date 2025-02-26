@@ -23,7 +23,7 @@
 1. Download the specific scripting utility/executor of your choice. Make sure it's supported.
 2. Execute the provided loadstring below.
 ```luau
-loadstring(game:HttpGet("https://raw.githubusercontent.com/RiiDadPGN/StarVape/main/NewMainScript.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RiiDadPGN/StarVape/main/loader.lua", true))()
 ```
 
 ## Possible Issues
