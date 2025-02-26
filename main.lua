@@ -1,8 +1,13 @@
---This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.
+--[[
+    VAPE⭐
+   ->Made with love by RiiDadPGN
+]]--
+
+--VAPE⭐ | Remove this file to make it persist after an update
 repeat task.wait() until game:IsLoaded()
 if shared.vape then shared.vape:Uninject() end
 
--- why do exploits fail to implement anything correctly? Is it really that hard?
+-- why do exploits fail to implement anything correctly? Is it really that hard? yup..
 if identifyexecutor then
 	if table.find({'Argon', 'Wave'}, ({identifyexecutor()})[1]) then
 		getgenv().setthreadidentity = nil
@@ -13,7 +18,7 @@ local vape
 local loadstring = function(...)
 	local res, err = loadstring(...)
 	if err and vape then
-		vape:CreateNotification('Vape', 'Failed to load : '..err, 30, 'alert')
+		vape:CreateNotification('Star Vape', 'Failed to load : '..err, 30, 'alert')
 	end
 	return res
 end
@@ -32,13 +37,13 @@ local playersService = cloneref(game:GetService('Players'))
 local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/QP-Offcial/VapeV4ForRoblox/'..readfile('newvape/profiles/commit.txt')..'/'..select(1, path:gsub('newvape/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/RiiDadPGN/StarVape/'..readfile('starvape/profiles/commit.txt')..'/'..select(1, path:gsub('starvape/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
 		end
 		if path:find('.lua') then
-			res = '--This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.\n'..res
+			res = '--VAPE⭐ | Remove this file to make it persist after an update\n'..res
 		end
 		writefile(path, res)
 	end
@@ -62,9 +67,9 @@ local function finishLoading()
 			local teleportScript = [[
 				shared.vapereload = true
 				if shared.VapeDeveloper then
-					loadstring(readfile('newvape/loader.lua'), 'loader')()
+					loadstring(readfile('starvape/loader.lua'), 'loader')()
 				else
-					loadstring(game:HttpGet('https://raw.githubusercontent.com/QP-Offcial/VapeV4ForRoblox/'..readfile('newvape/profiles/commit.txt')..'/loader.lua', true), 'loader')()
+					loadstring(game:HttpGet('https://raw.githubusercontent.com/RiiDadPGN/StarVape/'..readfile('starvape/profiles/commit.txt')..'/loader.lua', true), 'loader')()
 				end
 			]]
 			if shared.VapeDeveloper then
@@ -81,23 +86,23 @@ local function finishLoading()
 	if not shared.vapereload then
 		if not vape.Categories then return end
 		if vape.Categories.Main.Options['GUI bind indicator'].Enabled then
-			vape:CreateNotification('Finished Loading', vape.VapeButton and 'Press the button in the top right to open GUI' or 'Press '..table.concat(vape.Keybind, ' + '):upper()..' to open GUI', 5)
+			vape:CreateNotification('VAPE⭐ | Finished Loading', vape.VapeButton and 'Press the button in the top right to open GUI' or 'Press '..table.concat(vape.Keybind, ' + '):upper()..' to open GUI', 5)
 		end
 	end
 end
 
-if not isfile('newvape/profiles/gui.txt') then
-	writefile('newvape/profiles/gui.txt', 'new')
+if not isfile('starvape/profiles/gui.txt') then
+	writefile('starvape/profiles/gui.txt', 'new')
 end
-local gui = readfile('newvape/profiles/gui.txt')
+local gui = readfile('starvape/profiles/gui.txt')
 
-if not isfolder('newvape/assets/'..gui) then
-	makefolder('newvape/assets/'..gui)
+if not isfolder('starvape/assets/'..gui) then
+	makefolder('starvape/assets/'..gui)
 end
-vape = loadstring(downloadFile('newvape/guis/'..gui..'.lua'), 'gui')()
+vape = loadstring(downloadFile('starvape/guis/'..gui..'.lua'), 'gui')()
 -- shared.vape = vape
 
-local XFunctions = loadstring(downloadFile('newvape/libraries/XFunctions.lua'), 'XFunctions')()
+local XFunctions = loadstring(downloadFile('starvape/libraries/XFunctions.lua'), 'XFunctions')()
 XFunctions:SetGlobalData('XFunctions', XFunctions)
 XFunctions:SetGlobalData('vape', vape)
 
@@ -115,17 +120,17 @@ getgenv().errorNotification = function(title, msg, dur)
 end
 
 if not shared.VapeIndependent then
-	loadstring(downloadFile('newvape/games/universal.lua'), 'universal')()
-	loadstring(downloadFile('newvape/games/modules.lua'), 'modules')()
-	if isfile('newvape/games/'..game.PlaceId..'.lua') then
-		loadstring(readfile('newvape/games/'..game.PlaceId..'.lua'), tostring(game.PlaceId))(...)
+	loadstring(downloadFile('starvape/games/universal.lua'), 'universal')()
+	loadstring(downloadFile('starvape/games/modules.lua'), 'modules')()
+	if isfile('starvape/games/'..game.PlaceId..'.lua') then
+		loadstring(readfile('starvape/games/'..game.PlaceId..'.lua'), tostring(game.PlaceId))(...)
 	else
 		if not shared.VapeDeveloper then
 			local suc, res = pcall(function()
-				return game:HttpGet('https://raw.githubusercontent.com/QP-Offcial/VapeV4ForRoblox/'..readfile('newvape/profiles/commit.txt')..'/games/'..game.PlaceId..'.lua', true)
+				return game:HttpGet('https://raw.githubusercontent.com/RiiDadPGN/StarVape/'..readfile('starvape/profiles/commit.txt')..'/games/'..game.PlaceId..'.lua', true)
 			end)
 			if suc and res ~= '404: Not Found' then
-				loadstring(downloadFile('newvape/games/'..game.PlaceId..'.lua'), tostring(game.PlaceId))(...)
+				loadstring(downloadFile('starvape/games/'..game.PlaceId..'.lua'), tostring(game.PlaceId))(...)
 			end
 		end
 	end
