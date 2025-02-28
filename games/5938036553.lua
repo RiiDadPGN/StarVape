@@ -1,7 +1,7 @@
 local loadstring = function(...)
 	local res, err = loadstring(...)
 	if err and vape then 
-		vape:CreateNotification('Vape', 'Failed to load : '..err, 30, 'alert') 
+		vape:CreateNotification('Star Vape', 'Failed to load : '..err, 30, 'alert') 
 	end
 	return res
 end
@@ -14,13 +14,13 @@ end
 local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function() 
-			return game:HttpGet('https://raw.githubusercontent.com/QP-Offcial/VapeV4ForRoblox/'..readfile('newvape/profiles/commit.txt')..'/'..select(1, path:gsub('newvape/', '')), true) 
+			return game:HttpGet('https://raw.githubusercontent.com/RiiDadPGN/StarVape/'..readfile('starvape/profiles/commit.txt')..'/'..select(1, path:gsub('starvape/', '')), true) 
 		end)
 		if not suc or res == '404: Not Found' then 
 			error(res) 
 		end
 		if path:find('.lua') then 
-			res = '--This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.\n'..res 
+			res = '--VAPE⭐ | Remove this file to make it persist after an update\n'..res 
 		end
 		writefile(path, res)
 	end
@@ -49,7 +49,7 @@ local prediction = vape.Libraries.prediction
 local targetinfo = vape.Libraries.targetinfo
 local sessioninfo = vape.Libraries.sessioninfo
 local getcustomasset = vape.Libraries.getcustomasset
-local drawingactor = loadstring(downloadFile('newvape/libraries/drawing.lua'), 'drawing')(...)
+local drawingactor = loadstring(downloadFile('starvape/libraries/drawing.lua'), 'drawing')(...)
 local function notif(...) 
 	return vape:CreateNotification(...) 
 end
@@ -65,7 +65,7 @@ if not select(1, ...) then
 
 		task.spawn(function()
 			repeat task.wait() until not shared.vape
-			local executionString = "loadfile('newvape/main.lua')("..drawingactor..")"
+			local executionString = "loadfile('starvape/main.lua')("..drawingactor..")"
 			for i, v in shared do
 				if type(v) == 'string' then
 					executionString = string.format("shared.%s = '%s'", i, v)..'\n'..executionString
@@ -83,11 +83,11 @@ if not select(1, ...) then
 					return
 				end
 			end
-			notif('Vape', 'Failed to find actor', 10, 'alert')
+			notif('Star Vape', 'Failed to find actor', 10, 'alert')
 		end)
 	else
 		vape.Load = function()
-			notif('Vape', 'Missing actor functions.', 10, 'alert')
+			notif('Star Vape', 'Missing actor functions.', 10, 'alert')
 		end
 	end
 
@@ -102,7 +102,7 @@ local function addBlur(parent)
 	blur.Size = UDim2.new(1, 89, 1, 52)
 	blur.Position = UDim2.fromOffset(-48, -31)
 	blur.BackgroundTransparency = 1
-	blur.Image = getcustomasset('newvape/assets/new/blur.png')
+	blur.Image = getcustomasset('starvape/assets/new/blur.png')
 	blur.ScaleType = Enum.ScaleType.Slice
 	blur.SliceCenter = Rect.new(52, 31, 261, 502)
 	blur.Parent = parent
@@ -139,7 +139,7 @@ local function hookEvent(id, rfunc)
 	end)
 
 	if not suc then 
-		notif('Vape', 'Failed to hook ('..id..')', 10, 'alert') 
+		notif('Star Vape', 'Failed to hook ('..id..')', 10, 'alert') 
 	end
 
 	return type(res) == 'function' and res or function() end
