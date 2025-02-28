@@ -247,9 +247,9 @@ local function motorMove(target, cf)
 	task.delay(0, part.Destroy, part)
 end
 
-local hash = loadstring(downloadFile('newvape/libraries/hash.lua'), 'hash')()
-local prediction = loadstring(downloadFile('newvape/libraries/prediction.lua'), 'prediction')()
-entitylib = loadstring(downloadFile('newvape/libraries/entity.lua'), 'entitylibrary')()
+local hash = loadstring(downloadFile('starvape/libraries/hash.lua'), 'hash')()
+local prediction = loadstring(downloadFile('starvape/libraries/prediction.lua'), 'prediction')()
+entitylib = loadstring(downloadFile('starvape/libraries/entity.lua'), 'entitylibrary')()
 local whitelist = {
 	alreadychecked = {},
 	customtags = {},
@@ -605,7 +605,7 @@ run(function()
 
 		if not first or whitelist.textdata ~= whitelist.olddata then
 			if not first then
-				whitelist.olddata = isfile('newvape/profiles/whitelist.json') and readfile('newvape/profiles/whitelist.json') or nil
+				whitelist.olddata = isfile('starvape/profiles/whitelist.json') and readfile('starvape/profiles/whitelist.json') or nil
 			end
 
 			local suc, res = pcall(function()
@@ -649,7 +649,7 @@ run(function()
 				whitelist.localprio = whitelist:get(lplr)
 
 				pcall(function()
-					writefile('newvape/profiles/whitelist.json', whitelist.textdata)
+					writefile('starvape/profiles/whitelist.json', whitelist.textdata)
 				end)
 			end
 
@@ -3590,7 +3590,7 @@ run(function()
 		EntityArrow.BackgroundTransparency = 1
 		EntityArrow.BorderSizePixel = 0
 		EntityArrow.Visible = false
-		EntityArrow.Image = getcustomasset('newvape/assets/new/arrowmodule.png')
+		EntityArrow.Image = getcustomasset('starvape/assets/new/arrowmodule.png')
 		EntityArrow.ImageColor3 = entitylib.getEntityColor(ent) or Color3.fromHSV(Color.Hue, Color.Sat, Color.Value)
 		EntityArrow.Parent = Folder
 		Reference[ent] = EntityArrow
@@ -5286,7 +5286,7 @@ run(function()
 	
 	Radar = vape:CreateOverlay({
 		Name = 'Radar',
-		Icon = getcustomasset('newvape/assets/new/radaricon.png'),
+		Icon = getcustomasset('starvape/assets/new/radaricon.png'),
 		Size = UDim2.fromOffset(14, 14),
 		Position = UDim2.fromOffset(12, 13),
 		Function = function(callback)
@@ -5503,7 +5503,7 @@ run(function()
 	
 	SessionInfo = vape:CreateOverlay({
 		Name = 'Session Info',
-		Icon = getcustomasset('newvape/assets/new/textguiicon.png'),
+		Icon = getcustomasset('starvape/assets/new/textguiicon.png'),
 		Size = UDim2.fromOffset(16, 12),
 		Position = UDim2.fromOffset(12, 14),
 		Function = function(callback)
